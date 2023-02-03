@@ -10,7 +10,7 @@ spring:
   application:
     name: maryfarm-discovery-service
   rabbitmq:
-    host: 172.26.2.9
+    host: 172.26.11.24
     port: 5672
     username: guest
     password: guest
