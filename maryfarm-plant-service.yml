@@ -27,7 +27,7 @@ spring:
   #   sampler:
   #   probability: 1.0
   datasource:
-    url: jdbc:mysql://mysqldb:3307/plantdb?serverTimezone=Asia/Seoul&useSSL=false
+    url: jdbc:mysql://mysqldb:3307/plantdb?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
