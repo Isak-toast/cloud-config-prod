@@ -27,7 +27,7 @@ spring:
   #   sampler:
   #   probability: 1.0
   datasource:
-    url: jdbc:mysql://172.26.1.228:3307/boarddb?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://172.26.1.228:3307/boarddb?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -53,4 +53,4 @@ management:
         include: refresh, health, beans, httptrace, busrefresh, info, metrics, prometheus
 
 
-docker run -d --network maryfarm-network --name notify-service -e "spring.cloud.config.uri=http://config-service:8888" -e "spring.datasource.url=jdbc:172.26.1.228://mysql:3307/notifydb?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false" -e "spring.rabbitmq.host=rabbitmq" -e "eureka.client.serviceUrl.defaultZone=http://discovery-service:8761/eureka/" -e "logging.file=/api-logs/notifys-ws.log" isakggong/notify-server:maryfarm-1.0
+docker run -d --network maryfarm-network --name notify-service -e "spring.cloud.config.uri=http://config-service:8888" -e "spring.datasource.url=jdbc:172.26.1.228://mysql:3307/notifydb?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true" -e "spring.rabbitmq.host=rabbitmq" -e "eureka.client.serviceUrl.defaultZone=http://discovery-service:8761/eureka/" -e "logging.file=/api-logs/notifys-ws.log" isakggong/notify-server:maryfarm-1.0
