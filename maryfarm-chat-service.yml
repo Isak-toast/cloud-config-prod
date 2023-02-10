@@ -33,7 +33,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
+  data:
+    mongodb:
+      uri: mongodb://172.26.1.228:27017/maryfarm
 
 # p6spy? ?? SQL ?? ??
 decorator:

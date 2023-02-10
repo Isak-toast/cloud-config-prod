@@ -33,7 +33,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
+  data:
+    mongodb:
+      uri: mongodb://172.26.1.228:27017/maryfarm
 
 # p6spy? ?? SQL ?? ??
 decorator:
@@ -51,6 +54,3 @@ management:
     web:
       exposure:
         include: refresh, health, beans, httptrace, busrefresh, info, metrics, prometheus
-
-
-docker run -d --network maryfarm-network --name notify-service -e "spring.cloud.config.uri=http://config-service:8888" -e "spring.datasource.url=jdbc:172.26.1.228://mysql:3307/notifydb?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true" -e "spring.rabbitmq.host=rabbitmq" -e "eureka.client.serviceUrl.defaultZone=http://discovery-service:8761/eureka/" -e "logging.file=/api-logs/notifys-ws.log" isakggong/notify-server:maryfarm-1.0
