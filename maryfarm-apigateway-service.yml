@@ -87,3 +87,8 @@ management:
       exposure:
         include: refresh, health, beans, busrefresh, info, metrics, prometheus
 
+# springfox:
+#   documentation:
+#     swagger-ui:
+#       enabled: true
+#       url: https://maryfarm.shop/**/v3/api-docs
