@@ -1,10 +1,10 @@
 server:
-  port: 443
+  # port: 443
   # port: 8000
   ssl:
     enabled: true
-    key-store: classpath:keystore.p12
     key-store-password: noinjung!
+    key-store: classpath:keystore.p12
     key-store-type: PKCS12
   
 
@@ -31,6 +31,9 @@ spring:
   #   probability: 1.0
   cloud:
     gateway:
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
       routes:
         - id: maryfarm-user-service
           uri: lb://MARYFARM-USER-SERVICE
