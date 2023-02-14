@@ -1,11 +1,12 @@
 server:
-  port: 443
+  # port: 443
+  port: 8000
   ssl:
     enabled: true
     key-store:src/main/resources/keystore.p12
     key-store-password: noinjung!
     key-store-type: PKCS12
-  # port: 8000
+  
 
 eureka:
   client:
