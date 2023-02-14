@@ -6,10 +6,6 @@ server:
     key-store-password: noinjung90!
     key-store: classpath:keystore.p12
     key-store-type: PKCS12
-# server.ssl.enabled: true
-# server.ssl.key-store-password=noinjung!
-# server.ssl.key-store=classpath:keystore.p12
-# server.ssl.key-store-type=PKCS12  
 
 eureka:
   client:
@@ -87,6 +83,6 @@ management:
       exposure:
         include: refresh, health, beans, busrefresh, info, metrics, prometheus
 
-swagger:
-  ui:
-    scheme: https
+# swagger:
+#   ui:
+#     scheme: https
