@@ -1,12 +1,15 @@
-server:
-  # port: 443
-  # port: 8000
-  ssl:
-    enabled: true
-    key-store-password: noinjung!
-    key-store: classpath:keystore.p12
-    key-store-type: PKCS12
-  
+# server:
+#   # port: 443
+#   # port: 8000
+#   ssl:
+#     enabled: true
+#     key-store-password: noinjung!
+#     key-store: classpath:keystore.p12
+#     key-store-type: PKCS12
+server.ssl.enabled: true
+server.ssl.key-store-password: noinjung!
+server.ssl.key-store: classpath:keystore.p12
+server.ssl.key-store-type: PKCS12  
 
 eureka:
   client:
