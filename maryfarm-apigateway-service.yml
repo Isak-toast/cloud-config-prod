@@ -34,9 +34,9 @@ spring:
   #   probability: 1.0
   cloud:
     gateway:
-      httpclient:
-        ssl:
-          useInsecureTrustManager: true
+      # httpclient:
+      #   ssl:
+      #     useInsecureTrustManager: true
       routes:
         - id: maryfarm-user-service
           uri: lb://MARYFARM-USER-SERVICE
