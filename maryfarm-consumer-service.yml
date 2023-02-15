@@ -24,8 +24,9 @@ spring:
   #   probability: 1.0
   data:
     mongodb:
-      uri: mongodb://172.26.1.228:27017/maryfarm
+      uri: mongodb://root:1234@172.26.1.228:27017/maryfarm
       auto-index-creation: true
+
 
 management:
   endpoints:
