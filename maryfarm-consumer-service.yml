@@ -25,6 +25,8 @@ spring:
   data:
     mongodb:
       uri: mongodb://root:1234@172.26.1.228:27017/maryfarm
+      username: root
+      password: 1234
       auto-index-creation: true
 
 
