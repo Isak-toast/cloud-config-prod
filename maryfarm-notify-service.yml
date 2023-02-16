@@ -36,7 +36,10 @@ spring:
       ddl-auto: create
   data:
     mongodb:
-      uri: mongodb://172.26.1.228:27017/admin
+      host: 172.26.1.228
+      port: 27017
+      authentication-database: admin
+      database: maryfarm
       username: root
       password: 1234
 # p6spy를 통한 SQL 로그 출력
