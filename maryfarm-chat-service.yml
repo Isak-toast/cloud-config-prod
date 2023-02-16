@@ -36,8 +36,8 @@ spring:
       ddl-auto: create
   data:
     mongodb:
-      uri: mongodb://root:1234@172.26.1.228:27017/maryfarm
-
+      uri: mongodb://172.26.1.228:27017/maryfarm
+      
 # p6spy? ?? SQL ?? ??
 decorator:
   datasource:
