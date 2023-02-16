@@ -36,8 +36,7 @@ spring:
       ddl-auto: create
   data:
     mongodb:
-      host: 172.26.1.228
-      port: 27017
+      uri: mongodb://172.26.1.228:27017
       database: admin
       username: root
       password: 1234

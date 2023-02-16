@@ -36,11 +36,8 @@ spring:
       ddl-auto: create
   data:
     mongodb:
-      host: 172.26.1.228
-      port: 27017
-      database: admin
-      username: root
-      password: 1234
+      uri: mongodb://root:1234@172.26.1.228:27017/maryfarm
+
 # p6spy? ?? SQL ?? ??
 decorator:
   datasource:
