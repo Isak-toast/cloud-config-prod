@@ -38,8 +38,7 @@ spring:
     mongodb:
       host: 172.26.1.228
       port: 27017
-      authentication-database: admin
-      database: maryfarm
+      database: admin
       username: root
       password: 1234
 # p6spy를 통한 SQL 로그 출력
