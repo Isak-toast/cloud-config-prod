@@ -37,9 +37,10 @@ spring:
   data:
     mongodb:
       uri: mongodb://172.26.1.228:27017
-      database: admin
+      authentication-database: admin
       username: root
       password: 1234
+      database: maryfarm
 # p6spy를 통한 SQL 로그 출력
 decorator:
   datasource:
